@@ -1,0 +1,5 @@
+func main void
+ var int v1
+ assign v1 + 20 True
+ funccall print v1
+endfunc

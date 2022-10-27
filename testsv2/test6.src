@@ -1,0 +1,13 @@
+func main void
+ var int a
+ assign a 5
+ funccall print a
+ while > a 0
+  assign a - a 1
+  funccall print a
+  var string a
+  assign a "good"
+  funccall print a
+ endwhile
+ funccall print a
+endfunc

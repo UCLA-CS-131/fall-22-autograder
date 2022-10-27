@@ -1,0 +1,27 @@
+func main void
+  var int x
+  var string y
+  var bool z
+  assign x 42
+  assign y "foo"
+  assign z True 
+  funccall foo x y z
+  funccall print x " " y " " z
+  funccall bletch
+  funccall bar resulti
+  funccall print resulti
+endfunc
+
+func foo a:refint b:refstring c:refbool void
+ assign a -42
+ assign b "bar"
+ assign c False
+endfunc
+
+func bletch int
+ return 100
+endfunc
+
+func bar a:refint void
+ assign a -100 
+endfunc

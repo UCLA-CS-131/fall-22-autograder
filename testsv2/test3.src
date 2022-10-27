@@ -1,0 +1,18 @@
+func main void
+ var int a b
+ assign a 5
+ assign b 100
+ funccall print a " " b
+ if True
+  assign a 10
+  funccall print a " " b
+  var int a
+  assign a 6
+  funccall print a " " b
+  var int b
+  assign b -1
+  funccall print a " " b
+ endif
+ funccall print a " " b
+endfunc
+

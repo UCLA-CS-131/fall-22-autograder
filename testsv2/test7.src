@@ -1,0 +1,21 @@
+func main void
+  var int a
+  assign a 5
+  if True
+   funccall print a
+   var string b
+   assign b "foobar"
+   if True
+    funccall print a " " b
+    var int b
+    assign b 1
+    while > b 0
+     var bool c
+     assign c True
+     funccall print a " " b " " c
+     assign b - b 1
+    endwhile
+   endif
+   funccall print b
+  endif
+endfunc

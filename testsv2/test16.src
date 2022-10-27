@@ -1,0 +1,9 @@
+func main void
+  var string s
+  var int n
+  funccall input "Enter a number: "
+  funccall strtoint results
+  assign n + resulti 1
+  funccall print n
+endfunc
+

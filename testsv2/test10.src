@@ -1,0 +1,30 @@
+func ifunc n:int int
+ return n 
+endfunc
+
+func sfunc s:string string
+ return s
+endfunc
+
+func bfunc b:bool bool
+ return b
+endfunc
+
+func main void
+  var int i
+  var string s
+  var bool b
+
+  funccall ifunc 42
+  assign i resulti
+  funccall print i
+  
+  funccall sfunc "foo"
+  assign s results
+  funccall print s
+
+  funccall bfunc True
+  assign b resultb
+  funccall print b
+
+endfunc

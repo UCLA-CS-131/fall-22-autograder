@@ -1,0 +1,17 @@
+func foo a:int b:int c:int void
+  assign a 1
+  assign b 1
+  assign c 1
+  funccall print a " " b " " c
+endfunc
+
+
+func main void
+  var int a b c
+  assign a 2
+  assign b 2
+  assign c 2
+  funccall print a " " b " " c
+  funccall foo a b c
+  funccall print a " " b " " c
+endfunc

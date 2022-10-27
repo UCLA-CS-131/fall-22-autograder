@@ -1,0 +1,6 @@
+func main void
+  var int a
+  if 5
+    assign a 5
+  endif
+endfunc

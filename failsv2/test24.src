@@ -1,0 +1,4 @@
+func main void
+  var int a
+  assign a + 5 True
+endfunc

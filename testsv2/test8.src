@@ -1,0 +1,15 @@
+
+func foo a:int b:string c:bool void
+  funccall print a " " b " " c
+endfunc
+
+
+func main void
+  var int a
+  var string b
+  var bool c
+  assign a 2
+  assign b "foo"
+  assign c True
+  funccall foo a b c
+endfunc
