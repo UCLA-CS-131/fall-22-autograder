@@ -1,0 +1,7 @@
+func main
+  var string v1 v2
+  assign v1 "hello "
+  assign v2 + v1 "world!"
+  funccall print v1
+  funccall print v2
+endfunc

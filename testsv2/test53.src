@@ -1,0 +1,16 @@
+# nested variable scopintg
+func main void
+    var int a
+    assign a 5
+    if > a 0
+        var bool a
+        assign a True
+        if a
+            var int a
+            assign a 7
+            funccall print a
+        endif
+        funccall print a
+    endif
+    funccall print a
+endfunc

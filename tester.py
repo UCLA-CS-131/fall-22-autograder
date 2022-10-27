@@ -92,8 +92,8 @@ def generate_test_case_structure(cases, dir, category='', expect_failure=False, 
   } for i in cases]
 
 def generate_test_suite(version):
-  successes = {1,2,6,8,10,27,28}
-  fails = {1,7,9}
+  successes = {22, 47, 50, 53, 55}
+  fails = {3, 4, 8, 9, 10}
   return generate_test_case_structure(
     successes,
     f'testsv{version}/',

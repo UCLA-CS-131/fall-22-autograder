@@ -1,0 +1,9 @@
+# define variable in main, make sure it's not in scope in called fn
+func main void
+ var int a
+ funccall foo
+endfunc main
+
+func foo void
+ funccall print a
+endfunc

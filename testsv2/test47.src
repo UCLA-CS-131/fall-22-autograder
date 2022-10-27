@@ -1,0 +1,25 @@
+#double a string, recursively
+
+func main void
+    var int n
+    assign n 4
+    var string result
+    assign result "a"
+    funccall double result n
+    funccall print result
+
+    assign n 6
+    assign result "##"
+    funccall double result n
+    funccall print result
+
+endfunc
+
+func double result:refstring n:int void
+    if == n 0
+        return
+    endif
+    assign n - n 1
+    assign result + result result
+    funccall double result n
+endfunc

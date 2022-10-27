@@ -1,0 +1,13 @@
+# check default values
+
+func main void
+  var int x
+  var string s
+  var bool b test
+  assign test == x 0
+  funccall print test
+  assign test == s ""
+  funccall print test
+  assign test == b False
+  funccall print test
+endfunc
