@@ -1,0 +1,77 @@
+# Church encoding
+# succ = \n. \f. \x. f (n f x)
+func succ n:func func
+  lambda f:func x:int int
+    funccall n f x
+    funccall f resulti
+    return resulti
+  endlambda
+  return resultf
+endfunc
+
+# plus = \m. \n. \f. \x. m f (n f x)
+func plus m:func n:func func
+  lambda f:func x:int int
+    funccall n f x
+    funccall m f resulti
+    return resulti
+  endlambda
+  return resultf
+endfunc
+
+# mult = \m. \n. \f. \x. m (n f) x
+func mult m:func n:func func
+  lambda f:func x:int int
+    lambda y:int int
+      funccall n f y
+      return resulti
+    endlambda
+    funccall m resultf x
+    return resulti
+  endlambda
+  return resultf
+endfunc
+
+func getnum n:func int
+  lambda x:int int
+    return + x 1
+  endlambda
+  funccall n resultf 0
+  return resulti
+endfunc
+
+func main void
+  var func zero
+  # zero = \f. \x. x
+  lambda f:func x:int int
+    return x
+  endlambda
+  assign zero resultf
+  
+  funccall getnum zero
+  funccall print resulti
+  
+  var func cur next
+  assign next zero
+  var int i
+
+  # produces 1..10 and print
+  while < i 10
+    assign cur next
+    funccall succ cur
+    assign next resultf
+    funccall getnum next
+    funccall print resulti
+    assign i + i 1
+  endwhile
+  
+  # 9+10=19
+  funccall plus cur next
+  funccall getnum resultf
+  funccall print resulti
+  
+  # 9*10=90
+  funccall mult cur next
+  funccall getnum resultf
+  funccall print resulti
+endfunc

@@ -1,0 +1,42 @@
+func newlist object
+  var object guard
+  assign guard.end True
+  return guard
+endfunc
+
+func cons x:int xs:object object
+  var object hd
+  assign hd.val x
+  assign hd.next xs
+  assign hd.end False
+  return hd
+endfunc
+
+func print_and_pop stack:object object
+  if stack.end
+    funccall print "end"
+    return stack
+  endif
+  funccall print stack.val
+  return stack.next
+endfunc
+
+func main void
+  funccall newlist
+  funccall cons 1 resulto
+  funccall cons 2 resulto
+  funccall cons 3 resulto
+  funccall cons 4 resulto
+  funccall cons 5 resulto
+  funccall cons 6 resulto
+  funccall cons 7 resulto
+
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+  funccall print_and_pop resulto
+endfunc

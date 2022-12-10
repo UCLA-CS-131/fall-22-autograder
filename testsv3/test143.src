@@ -1,0 +1,16 @@
+func ref f:func func
+  return f
+endfunc
+
+func blep void
+  funccall print "what a strange example..."
+endfunc
+
+func main void
+  funccall ref ref
+  funccall resultf ref
+  funccall resultf resultf
+  funccall ref resultf
+  funccall resultf blep
+  funccall resultf
+endfunc

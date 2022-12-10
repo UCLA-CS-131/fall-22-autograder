@@ -1,0 +1,13 @@
+# capture by value and shadowing
+
+func main void
+  var int a
+  if True
+    var int a
+    assign a 2
+    lambda void
+      funccall print a
+    endlambda
+  endif
+  funccall resultf
+endfunc

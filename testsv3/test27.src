@@ -1,0 +1,22 @@
+# nested lambda test
+
+func main void
+  var int capture_me
+  assign capture_me 1000
+  lambda a:int func
+   var int capture_me2
+   assign capture_me2 10000
+   lambda b:int int
+    return + + + a capture_me b capture_me2
+   endlambda
+   return resultf
+  endlambda
+ 
+ var func f g
+ assign f resultf
+ funccall f 10
+ assign g resultf
+ funccall g 42
+ funccall print resulti
+  
+endfunc

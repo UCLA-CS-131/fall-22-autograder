@@ -1,0 +1,20 @@
+func main void
+  var object x y
+  assign x.s "10"
+  assign y.s + "-" x.s
+  assign x.method f
+  assign y.method f
+  funccall x.method
+  funccall y.method
+  funccall print x.i
+  funccall print y.i
+endfunc
+
+func f void
+  funccall strtoint this.s
+  assign this.i resulti
+  funccall print this.i
+  if < this.i 0
+    funccall print "BOOM!"
+  endif
+endfunc

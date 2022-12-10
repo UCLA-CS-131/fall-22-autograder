@@ -1,0 +1,11 @@
+func retf func
+  lambda x:int int
+    return x
+  endlambda
+  return resultf
+endfunc
+
+func main void
+  funccall retf
+  assign resultf True
+endfunc

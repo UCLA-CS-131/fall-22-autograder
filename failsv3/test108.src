@@ -1,0 +1,10 @@
+func main void
+  if True
+    funccall getdobj
+  endif
+  assign resulto + 1 2
+endfunc
+
+func getdobj object
+  return
+endfunc

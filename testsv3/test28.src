@@ -1,0 +1,13 @@
+
+
+func main void
+ lambda a:int int
+   funccall print a
+ endlambda
+ 
+ var func f
+ assign f resultf
+ funccall f 10
+ funccall print resulti
+  
+endfunc

@@ -1,0 +1,35 @@
+func fix2 b:func c:int int
+  lambda x:int int
+    funccall fix2 b x
+    return resulti
+  endlambda
+  funccall b resultf c
+  return resulti
+endfunc
+
+func fibx f:func x:int int
+  if < x 2
+    return 1
+  endif
+  
+  var int a b
+  assign a - x 1
+  funccall f a
+  assign b resulti
+  assign a - x 2
+  funccall f a
+  return + b resulti
+endfunc
+
+func main void
+  funccall fix2 fibx 1
+  funccall print resulti
+  funccall fix2 fibx 2
+  funccall print resulti
+  funccall fix2 fibx 3
+  funccall print resulti
+  funccall fix2 fibx 5
+  funccall print resulti
+  funccall fix2 fibx 10
+  funccall print resulti
+endfunc

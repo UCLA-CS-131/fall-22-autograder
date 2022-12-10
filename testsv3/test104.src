@@ -1,0 +1,9 @@
+func main void
+  var object hills
+  assign hills.desc 1
+  funccall print hills.desc
+  assign hills.desc "Far"
+  funccall print hills.desc
+  assign hills.desc True
+  funccall print hills.desc
+endfunc

@@ -1,0 +1,8 @@
+func main void
+  var object o
+  lambda x:int void
+    funccall this
+  endlambda
+  assign o.f resultf
+  funccall o.f 3
+endfunc

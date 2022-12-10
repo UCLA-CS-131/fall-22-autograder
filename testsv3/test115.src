@@ -1,0 +1,15 @@
+func main void
+  lambda n:string a:int object
+    var object b
+    assign b.name n
+    assign b.age a
+    return b
+  endlambda
+  funccall resultf "Joe" 24
+  funccall print resulto.name " " resulto.age
+  var object j
+  assign j resulto
+  funccall resultf "Jane" 32
+  funccall print resulto.name " " resulto.age
+  funccall print j.name " " j.age
+endfunc

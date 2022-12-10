@@ -1,0 +1,21 @@
+func set_and_recurse x:object void
+  if == x.iter 0
+    funccall x.f
+    return
+  endif
+  var object hd
+  assign hd.f x.f
+  assign hd.iter - x.iter 1
+  funccall set_and_recurse hd
+endfunc
+
+func print_done void
+  funccall print "done"
+endfunc
+
+func main void
+  var object o
+  assign o.iter 5
+  assign o.f print_done
+  funccall set_and_recurse o
+endfunc

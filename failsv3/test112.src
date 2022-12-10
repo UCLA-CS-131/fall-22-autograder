@@ -1,0 +1,4 @@
+func main void
+  var object o
+  funccall o
+endfunc

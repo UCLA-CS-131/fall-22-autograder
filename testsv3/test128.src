@@ -1,0 +1,21 @@
+# capture is not a parameter to create_lambda in this modified example
+func create_lambda func
+  var int x
+  assign x 42
+  lambda y:int int     # defines a lambda/closure and stores in resultf
+    var int z
+    assign z + x y
+    return z
+  endlambda
+
+  return resultf       # return our lambda/closure
+endfunc
+
+func main void
+  var func f g
+  funccall create_lambda
+  assign f resultf
+
+  funccall f 42
+  funccall print resulti      # prints 52
+endfunc

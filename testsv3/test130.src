@@ -1,0 +1,8 @@
+func never_called x:func void
+  funccall print 42
+endfunc
+
+func main void
+  var func f
+  funccall never_called f
+endfunc

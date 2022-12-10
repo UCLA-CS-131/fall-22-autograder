@@ -1,0 +1,15 @@
+func retobj x:int object
+  var object k
+  if > x 0
+    assign k.y - 0 x
+    return k
+  endif
+endfunc
+
+func main void
+  funccall retobj 10
+  if == resulto.y -10
+    funccall retobj resulto.y
+    funccall print resulto.y
+  endif
+endfunc

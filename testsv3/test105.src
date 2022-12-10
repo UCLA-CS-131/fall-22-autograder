@@ -1,0 +1,14 @@
+func main void
+  var object k
+  assign k.a 10
+  if True
+    assign k.a + k.a 1
+    funccall print k.a
+    var object k
+    assign k.a "string"
+    funccall print k.a
+    assign k.a 101
+    funccall print k.a
+  endif
+  funccall print k.a
+endfunc

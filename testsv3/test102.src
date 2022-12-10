@@ -1,0 +1,6 @@
+func main void
+  var object o1 o2
+  assign o1.xyz "hello"
+  assign o2.xyz 123
+  funccall print o1.xyz " " o2.xyz
+endfunc

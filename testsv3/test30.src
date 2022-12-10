@@ -1,0 +1,17 @@
+func main void
+ var object foo
+ assign foo.x 5
+ assign foo.x + foo.x 1
+ funccall print foo.x
+ assign foo.x "bar"
+ funccall print foo.x
+
+ var object bar
+ assign bar.q 10
+ assign foo.obj bar
+ 
+ var object bletch
+ assign bletch foo.obj
+ funccall print bletch.q
+
+endfunc

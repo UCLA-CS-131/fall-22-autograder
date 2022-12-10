@@ -1,0 +1,12 @@
+func null object
+  var object o
+  return o
+endfunc
+
+func main void
+  var object o
+  assign o.name "chelsey"
+  funccall null
+  assign resulto o
+  funccall print o.name
+endfunc

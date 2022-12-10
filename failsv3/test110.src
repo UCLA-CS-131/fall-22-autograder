@@ -1,0 +1,3 @@
+func main void
+  funccall resultf
+endfunc

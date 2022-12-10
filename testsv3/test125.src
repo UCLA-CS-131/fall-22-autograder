@@ -1,0 +1,12 @@
+func retobj object
+  var object r
+  assign r.x "deadbeef"
+  return r
+endfunc
+
+func main void
+  if True
+    funccall retobj
+  endif
+  funccall print resulto.x
+endfunc

@@ -1,0 +1,11 @@
+func process a:object void
+  funccall print a.lit
+  assign a.gap "hahaha" 
+endfunc
+
+func main void
+  var object o
+  assign o.lit 123
+  funccall process o
+  funccall print o.gap
+endfunc

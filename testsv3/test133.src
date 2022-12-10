@@ -1,0 +1,14 @@
+# tests returning a function from a parameter
+func refl f:func func
+  return f
+endfunc
+
+func print_hi void
+  funccall print "hi"
+endfunc
+
+func main void
+  var func f
+  funccall refl print_hi
+  funccall resultf
+endfunc

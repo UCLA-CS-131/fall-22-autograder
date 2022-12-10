@@ -1,0 +1,22 @@
+func print_and_dec void
+  if this.done
+    funccall print "done"
+    return
+  endif
+  if == this.val 0
+    assign this.done True
+    funccall this.print_and_dec
+    return
+  endif
+  assign this.val - this.val 1
+  funccall print "dec"
+  funccall this.print_and_dec
+endfunc
+
+func main void
+  var object o
+  assign o.done False
+  assign o.val 20
+  assign o.print_and_dec print_and_dec
+  funccall o.print_and_dec
+endfunc

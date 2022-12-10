@@ -1,0 +1,11 @@
+func boop x:string void
+  funccall print "boop " x
+endfunc
+
+func main void
+  lambda x:int void
+    funccall print x
+  endlambda
+  assign resultf boop
+  funccall resultf "anna"
+endfunc

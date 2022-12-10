@@ -1,0 +1,8 @@
+func main void
+  var object x y
+  assign y.h True
+  assign y.z 5
+  assign x.h "meow"
+  assign x.t y
+  funccall print x.z
+endfunc

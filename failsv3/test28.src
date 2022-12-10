@@ -1,0 +1,7 @@
+func f x:int void
+endfunc
+
+func main void
+  var object q
+  funccall f q
+endfunc

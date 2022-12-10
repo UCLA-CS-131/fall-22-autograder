@@ -1,0 +1,18 @@
+
+
+func f i:int void
+  funccall print i
+  lambda void
+    var int tmp
+    assign tmp * i 1000
+    funccall print tmp
+  endlambda
+  assign this.method resultf
+endfunc
+
+func main void
+  var object x
+  assign x.method f
+  funccall x.method 42
+  funccall x.method
+endfunc

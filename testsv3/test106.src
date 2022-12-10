@@ -1,0 +1,20 @@
+func main void
+  var object head
+  assign head.v False
+  var int i
+  while < i 5
+    var object tmp
+    assign tmp.x i
+    assign tmp.next head
+    assign tmp.v True
+    assign head tmp
+    assign i + 1 i
+  endwhile
+  
+  while > i 0
+    funccall print head.v " " head.x
+    assign head head.next
+    assign i - i 1
+  endwhile
+  funccall print head.v
+endfunc

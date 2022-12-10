@@ -1,0 +1,10 @@
+func main void
+  var object x
+  lambda s:string void
+    assign this.val s
+  endlambda
+  assign x.method2 resultf
+  
+  funccall x.method2 "bar"
+  funccall print x.val
+endfunc

@@ -1,0 +1,14 @@
+# from spec
+func f i:int void
+  assign this.val i    # Name error! "this" is undefined!
+endfunc
+
+func main void
+  var object x
+
+  assign x.val 42
+  assign x.method f
+
+  funccall f 52
+  funccall print x.val   # never gets here
+endfunc

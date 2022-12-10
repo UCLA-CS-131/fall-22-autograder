@@ -1,0 +1,15 @@
+func print_one void
+  funccall print 1
+endfunc
+
+func print_two void
+  funccall print 2
+endfunc
+
+func main void
+  var func f
+  assign f print_one
+  funccall f
+  assign f print_two
+  funccall f
+endfunc

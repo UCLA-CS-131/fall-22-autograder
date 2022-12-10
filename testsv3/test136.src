@@ -1,0 +1,16 @@
+func generate_adder x:int func
+  lambda y:int int
+    return + x y
+  endlambda
+
+  return resultf
+endfunc
+
+func main void
+  funccall generate_adder 5
+  funccall resultf 5
+  funccall print resulti
+  funccall generate_adder 6
+  funccall resultf -6
+  funccall print resulti
+endfunc

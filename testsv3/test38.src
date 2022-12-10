@@ -1,0 +1,13 @@
+func foo x:object object
+  return x
+endfunc
+
+func main void
+  var object o p
+
+  assign o.x 10
+  funccall foo o
+  assign p resulto
+  assign p.x 20
+  funccall print o.x  # prints 20
+endfunc

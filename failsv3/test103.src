@@ -1,0 +1,16 @@
+func main void
+  var object obj
+  assign obj.d 3
+  assign obj.m f
+  funccall obj.m
+  if == 6 resulti
+    funccall f
+    funccall print resulti
+  endif
+endfunc
+
+func f int
+  var int h
+  assign h * 2 this.d
+  return h
+endfunc

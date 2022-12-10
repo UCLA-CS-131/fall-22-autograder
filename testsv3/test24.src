@@ -1,0 +1,16 @@
+func main void
+ var int capture_me
+ assign capture_me 42
+
+ lambda a:int int
+  assign capture_me + 1 capture_me
+  return + a capture_me
+ endlambda
+ 
+ var func f
+ assign f resultf
+ funccall f 10
+ funccall print resulti
+ funccall print capture_me 
+  
+endfunc

@@ -1,0 +1,14 @@
+func main void
+  var object t
+  assign t.y 53
+  assign t.f f
+  funccall t.f
+  funccall print t.y " " resulto.z
+endfunc
+
+func f object
+  var object r
+  assign r.z this.y
+  assign this.y * 2 this.y
+  return r
+endfunc

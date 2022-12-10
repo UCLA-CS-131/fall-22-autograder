@@ -1,0 +1,9 @@
+func main void
+  var object o
+  assign o.x 3
+  if True
+    var object o
+    assign o.x "ayo?"
+    assign o.y + o.x 1
+  endif
+endfunc

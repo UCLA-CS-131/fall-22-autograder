@@ -1,0 +1,19 @@
+# this infinite loops if your program is wrong!!
+
+func is_zero x:int bool
+  return == x 0
+endfunc
+
+func dec_until_pred pred:func x:int void
+  funccall pred x
+  if == resultb True
+    funccall print "done"
+    return
+  endif
+  assign x - x 1
+  funccall dec_until_pred pred x
+endfunc
+
+func main void
+  funccall dec_until_pred is_zero 5
+endfunc

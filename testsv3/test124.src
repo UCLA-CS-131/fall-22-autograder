@@ -1,0 +1,17 @@
+func main void
+  var object x
+  funccall buildx x 7
+  funccall print x.n " " x.m " " x.k
+endfunc
+
+func buildx o:object i:int void
+  assign o.n i
+  funccall buildy o i
+  assign o.k i
+endfunc
+
+func buildy p:object j:refint void
+  assign j + j 1
+  assign p.m j
+  assign j + j 1
+endfunc

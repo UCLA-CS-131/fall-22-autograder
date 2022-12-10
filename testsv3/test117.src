@@ -1,0 +1,41 @@
+func counter c:int object
+  lambda x:int object
+    var object o
+    lambda int
+      assign x + x 1
+      return x
+    endlambda
+    assign o.inc resultf
+    lambda int
+      assign x * x 2
+      return x
+    endlambda
+    assign o.double resultf
+    return o
+  endlambda
+  funccall resultf c
+  return resulto
+endfunc
+
+func main void
+  var int tmp
+  funccall counter 1
+  var object c1
+  assign c1 resulto
+  funccall c1.inc
+  funccall print resulti
+  funccall c1.inc
+  funccall print resulti
+  funccall c1.double
+  funccall print resulti
+  funccall c1.double
+  funccall print resulti
+  
+  funccall counter 3
+  var object c2
+  assign c2 resulto
+  funccall c2.double
+  funccall print resulti
+  funccall c1.double
+  funccall print resulti
+endfunc

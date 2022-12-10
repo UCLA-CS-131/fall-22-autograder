@@ -1,0 +1,4 @@
+func main void
+  var int x
+  assign x.x 10
+endfunc

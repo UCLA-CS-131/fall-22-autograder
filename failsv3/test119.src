@@ -1,0 +1,9 @@
+func print_x obj:object void
+  funccall print obj.x
+endfunc
+
+func main void
+  var object o
+  assign o.x 3
+  funccall print_x o.x
+endfunc

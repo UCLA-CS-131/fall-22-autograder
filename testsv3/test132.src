@@ -1,0 +1,16 @@
+# pass same function twice, refint
+
+func ref_plus_one x:refint void
+  assign x + x 1
+endfunc
+
+func ref_call_one_by_one x:refint f1:func f2:func void
+  funccall f1 x
+  funccall f2 x
+endfunc
+
+func main void
+  var int x
+  funccall ref_call_one_by_one x ref_plus_one ref_plus_one
+  funccall print x
+endfunc

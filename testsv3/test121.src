@@ -1,0 +1,15 @@
+func main void
+  var object o1 o2
+  assign o1.x 100
+  assign o2.x 53
+  lambda o2:object object
+    funccall print o1.x " " o2.x
+    assign o2.x + o1.x o2.x
+    assign o1.x + o1.x o2.x
+    return o2
+  endlambda
+  funccall resultf o1
+  funccall print o1.x " " o2.x
+  assign resulto.x 987
+  funccall print o1.x " " o2.x
+endfunc

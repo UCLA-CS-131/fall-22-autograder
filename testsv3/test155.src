@@ -1,0 +1,32 @@
+func print_or_traverse x:object void
+  if == x.end True
+    funccall print x.val
+    return
+  endif
+  funccall print_or_traverse x.next
+endfunc
+
+func main void
+  var object o1 o2 o3 o4 o5 o6 o7 o8 o9 o10
+  assign o1.next o2
+  assign o1.end False
+  assign o2.next o3
+  assign o2.end False
+  assign o3.next o4
+  assign o3.end False
+  assign o4.next o5
+  assign o4.end False
+  assign o5.next o6
+  assign o5.end False
+  assign o6.next o7
+  assign o6.end False
+  assign o7.next o8
+  assign o7.end False
+  assign o8.next o9
+  assign o8.end False
+  assign o9.next o10
+  assign o9.end False
+  assign o10.end True
+  assign o10.val 4242
+  funccall print_or_traverse o1
+endfunc

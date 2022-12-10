@@ -1,0 +1,68 @@
+func nilnode object
+  var object node
+  assign node.v -1
+  return node
+endfunc
+
+func isnil node:object bool
+  return < node.v 0
+endfunc
+
+func newnode v:int object
+  var object node
+  assign node.v v
+  funccall nilnode
+  assign node.l resulto
+  funccall nilnode
+  assign node.r resulto
+  return node
+endfunc
+
+func insert root:object v:int void
+  if == v root.v
+    return
+  endif
+  if < v root.v
+    funccall isnil root.l
+    if resultb
+      funccall newnode v
+      assign root.l resulto
+    else
+      funccall insert root.l v
+    endif
+  else
+    funccall isnil root.r
+    if resultb
+      funccall newnode v
+      assign root.r resulto
+    else
+      funccall insert root.r v
+    endif
+  endif
+endfunc
+
+func printtree root:object void
+  funccall isnil root
+  if resultb
+    return
+  endif
+  funccall printtree root.l
+  funccall print root.v
+  funccall printtree root.r
+endfunc 
+
+func main void
+  var object root
+  funccall newnode 5
+  assign root resulto
+
+  funccall insert root 2
+  funccall insert root 7
+  funccall insert root 4
+  funccall insert root 1
+  funccall insert root 3
+  funccall insert root 8
+  funccall insert root 6
+
+  funccall printtree root
+endfunc

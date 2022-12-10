@@ -1,0 +1,14 @@
+func generate_greeter greeting:string func
+  lambda name:string void
+    funccall print greeting " " name
+  endlambda
+
+  return resultf
+endfunc
+
+func main void
+  funccall generate_greeter "Hello There"
+  funccall resultf "General Kenobi"
+  funccall generate_greeter "Coffee"
+  funccall resultf "Poorva"
+endfunc

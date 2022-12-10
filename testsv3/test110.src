@@ -1,0 +1,16 @@
+func main void
+  var object s
+  lambda x:int void
+    assign this.x + x 3
+  endlambda
+  assign s.method2 resultf
+  assign s.method1 foo
+  funccall s.method1
+  funccall print resulti
+endfunc
+
+func foo int
+  funccall this.method2 5
+  funccall print this.x
+  return - this.x 3
+endfunc

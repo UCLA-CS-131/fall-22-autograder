@@ -1,0 +1,5 @@
+func main void
+  var object t
+  assign t.method True
+  funccall t.method
+endfunc

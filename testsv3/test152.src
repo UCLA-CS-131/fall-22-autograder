@@ -1,0 +1,20 @@
+func assign_with_shadow o:object void
+  var int x
+  assign x 1
+  if True
+    var int x
+    assign x 2
+    assign o.x x
+    funccall print o.x
+  endif
+  funccall print o.x
+  assign o.x x
+  funccall print o.x
+endfunc
+
+func main void
+  var object o
+  assign o.x 0
+  funccall assign_with_shadow o
+  funccall print o.x
+endfunc

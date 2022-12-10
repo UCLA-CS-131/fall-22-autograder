@@ -1,0 +1,10 @@
+func f i:int void
+  assign this.val i
+endfunc
+
+func main void
+  var object x
+  assign x.method f
+  funccall x.method 42
+  funccall print x.val
+endfunc

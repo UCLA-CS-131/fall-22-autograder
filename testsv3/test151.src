@@ -1,0 +1,31 @@
+func dec_and_print_1 o:object void
+  if == this.x 0
+    funccall print "wonderful!"
+    return
+  endif
+  assign o.x - this.x 1
+  funccall this.dec_and_print_2 o.y
+endfunc
+
+func dec_and_print_2 o:object void
+  if == this.x 0
+    funccall print "terrible!"
+    return
+  endif
+  assign o.x - this.x 1
+  funccall this.dec_and_print_1 o.z
+endfunc
+
+func main void
+  var object y
+  var object z
+  assign y.x 5
+  assign z.x 6
+  assign y.z z
+  assign z.y y
+  assign y.dec_and_print_1 dec_and_print_1
+  assign y.dec_and_print_2 dec_and_print_2
+  assign z.dec_and_print_1 dec_and_print_1
+  assign z.dec_and_print_2 dec_and_print_2
+  funccall y.dec_and_print_2 y
+endfunc

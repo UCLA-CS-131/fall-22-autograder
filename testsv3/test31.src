@@ -1,0 +1,22 @@
+func f x:object object
+  assign x.a 42
+  var object y
+  assign y x
+  assign y.b 43
+  return y
+endfunc
+
+func main void
+ var object q r
+ assign q.a 10
+ assign q.b 11
+
+ funccall f q
+ funccall print q.a
+ funccall print q.b
+
+ assign r resulto
+ funccall print r.a
+ funccall print r.b
+
+endfunc

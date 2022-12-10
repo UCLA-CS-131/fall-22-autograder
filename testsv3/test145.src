@@ -1,0 +1,28 @@
+func this_greeter_generator func
+  var string greeting
+  assign greeting this.greeting
+
+  lambda name:string void
+    funccall print greeting name
+  endlambda
+  return resultf
+endfunc
+
+func main void
+  var object o
+  var func f
+  assign o.greeting "ayo "
+
+  assign o.generate_greeter this_greeter_generator
+
+  funccall o.generate_greeter
+  assign f resultf
+  funccall f "edmond"
+
+  assign o.greeting "AYO?? "
+  funccall f "edmond"
+
+  funccall o.generate_greeter
+  assign f resultf
+  funccall f "edmond"
+endfunc

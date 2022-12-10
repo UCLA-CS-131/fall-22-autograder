@@ -1,0 +1,7 @@
+func main void
+  var object x
+  assign x.i 5
+  assign x.s "foobar"
+  assign x.b False
+  funccall print x.b " " x.i " " x.s
+endfunc

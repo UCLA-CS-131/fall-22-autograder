@@ -1,0 +1,23 @@
+func gen_clos x:int func
+  var int y
+  assign y 42
+  lambda z:int int
+    return * * x y z
+  endlambda
+  return resultf
+endfunc
+
+func main void
+  var func f
+  funccall gen_clos 5
+  assign f resultf
+  funccall f 3
+  funccall print resulti
+  assign f f
+  funccall f 3
+  funccall print resulti
+  funccall gen_clos 5
+  assign f resultf
+  funccall f 3
+  funccall print resulti
+endfunc

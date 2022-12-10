@@ -1,0 +1,14 @@
+# lambdas *don't* affect variables unless they're called
+
+func main void
+  var int a
+  lambda a:refint void
+    assign a + a 1
+  endlambda
+  funccall print a
+  lambda a:refint void
+    assign a + a 1
+  endlambda
+  funccall resultf a
+  funccall print a
+endfunc

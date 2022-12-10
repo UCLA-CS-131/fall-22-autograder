@@ -1,0 +1,14 @@
+func plop void
+  funccall print "plop"
+endfunc
+
+func main void
+  var object o
+  assign o.f plop
+  if True
+    var object o
+    assign o.f 3
+    funccall o.f
+  endif
+
+endfunc

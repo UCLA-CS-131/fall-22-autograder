@@ -1,0 +1,21 @@
+# see: https://en.wikipedia.org/wiki/Collatz_conjecture
+
+func collatz n:int void
+  var int x
+  funccall print n
+  if == n 1
+    funccall print "collatz done!!"
+    return
+  endif
+  if == % n 2 0
+    assign x / n 2
+    funccall collatz x
+    return
+  endif
+  assign x + * 3 n 1
+  funccall collatz x
+endfunc
+
+func main void
+  funccall collatz 12
+endfunc

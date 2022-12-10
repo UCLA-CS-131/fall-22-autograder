@@ -1,0 +1,10 @@
+func unwind obj:object void
+  funccall unwind obj.o
+  funccall print "done"
+endfunc
+
+func main void
+  var object o, p
+  assign o.o p
+  funccall unwind o
+endfunc

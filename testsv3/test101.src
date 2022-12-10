@@ -1,0 +1,12 @@
+func main void
+  var object o
+  assign o.a 3
+  var int a b
+  assign a 5
+  assign o.b b
+  while > a 0
+    assign o.b + o.b * o.a a
+    assign a - a 1
+  endwhile
+  funccall print a " " b " " o.a " " o.b
+endfunc

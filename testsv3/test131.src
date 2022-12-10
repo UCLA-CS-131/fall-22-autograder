@@ -1,0 +1,14 @@
+func plus_one x:int int
+  assign x + x 1
+  return x
+endfunc
+
+func double_call_print f:func x:int void
+  funccall f x
+  funccall f resulti
+  funccall print resulti
+endfunc
+
+func main void
+  funccall double_call_print plus_one 1
+endfunc

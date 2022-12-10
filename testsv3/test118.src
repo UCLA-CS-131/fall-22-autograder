@@ -1,0 +1,49 @@
+func newilist object
+  var object guard
+  assign guard.end True
+  return guard
+endfunc
+
+func cons x:int xs:object object
+  var object hd
+  assign hd.val x
+  assign hd.next xs
+  assign hd.end False
+  return hd
+endfunc
+
+func reduce f:func acc:int l:object int
+  if l.end
+    return acc
+  else
+    funccall f acc l.val
+    funccall reduce f resulti l.next
+    return resulti
+  endif
+endfunc
+
+func printlist l:object void
+  if != l.end True
+    funccall print l.val
+    funccall printlist l.next
+  endif
+endfunc
+
+func main void
+  funccall newilist
+  funccall cons 123 resulto
+  funccall cons 532 resulto
+  funccall cons 76 resulto
+  funccall cons 9 resulto
+  funccall cons -101 resulto
+  funccall cons 2 resulto
+  funccall cons 391 resulto
+  funccall cons 75 resulto
+  
+  lambda x:int y:int int
+    return + y x
+  endlambda
+  funccall reduce resultf 0 resulto
+  
+  funccall print resulti
+endfunc

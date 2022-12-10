@@ -1,0 +1,6 @@
+func main void
+  var object o
+  assign o.x 5
+  assign o o
+  funccall print o.x
+endfunc

@@ -1,0 +1,31 @@
+func fix f:func func
+  lambda x:func func
+    lambda func
+      funccall x x
+      return resultf
+    endlambda
+    funccall f resultf
+    return resultf
+  endlambda
+  funccall resultf resultf
+  return resultf
+endfunc
+func main void
+  lambda f:func func
+    lambda x:int int
+      if == x 0
+        return 1
+      else
+        var int r y
+        assign y - x 1
+        funccall f
+        funccall resultf y
+        return * x resulti
+      endif
+    endlambda
+    return resultf
+  endlambda
+  funccall fix resultf
+  funccall resultf 5
+  funccall print resulti
+endfunc

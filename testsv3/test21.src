@@ -1,0 +1,11 @@
+func inc a:int int
+  return + a 1
+endfunc
+
+func main void
+  var func f g
+  assign f inc
+  assign g f 
+  funccall g 5
+  funccall print resulti
+endfunc
